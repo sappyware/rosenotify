@@ -1,0 +1,82 @@
+[general]
+monitor = "primary"
+position = "top-right"
+margin_x = 10
+margin_y = 65
+spacing = 10
+width = 380
+max_visible = 5
+newest_first = true
+layer = "overlay"
+do_not_disturb = false
+dnd_allow_critical = true
+
+[timeout]
+low = 4
+normal = 8
+critical = 0
+
+[animation]
+style = "slide"
+enter_duration = 520
+exit_duration = 260
+reflow_duration = 300
+distance = 48
+easing = ""
+
+[behavior]
+left_click = "invoke"
+right_click = "dismiss"
+middle_click = "dismiss_all"
+pause_on_hover = true
+respect_app_timeout = true
+show_icons = true
+show_app_name = true
+show_actions = true
+show_close_button = true
+show_progress = true
+max_body_lines = 4
+
+[theme]
+active = "catppuccin_mocha"
+
+[themes.catppuccin_mocha]
+extends = "rose"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+body = "#bac2de"
+subtext = "#a6adc8"
+border = "#45475a"
+accent = "#cba6f7"
+low = "#94e2d5"
+normal = "#cba6f7"
+critical = "#f38ba8"
+button = "#313244"
+button_hover = "#45475a"
+progress_track = "#313244"
+shadow_color = "#11111b"
+shadow_opacity = 0.6
+shadow_blur = 1.0
+shadow_offset_y = 8
+opacity = 1.0
+radius = 12
+border_width = 1
+padding = 16
+icon_size = 48
+icon_radius = 10
+accent_width = 4
+progress_height = 3
+font_family = "Iosevka NF"
+font_size = 16
+summary_size = 14
+summary_weight = 600
+
+[[rules]]
+app = "^spotify$"
+timeout = 3
+accent = "#a6e3a1"
+
+[[rules]]
+summary = "battery"
+urgency = "critical"
+accent = "#fab387"
