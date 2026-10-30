@@ -31,9 +31,7 @@ Item {
     property real collapse: 1
 
     width: ListView.view ? ListView.view.width : Config.width
-    height: active
-        ? Math.min(card.height + Config.spacing, root.ListView.view ? root.ListView.view.height : Infinity) * collapse
-        : 0
+    height: active ? (card.height + Config.spacing) * collapse : 0
     visible: active
 
     Component.onCompleted: sync()
@@ -287,8 +285,9 @@ Item {
             ColumnLayout {
                 id: content
 
-                anchors.fill: parent
-                anchors.margins: root.theme.padding
+                width: parent.width - root.theme.padding * 2
+                x: root.theme.padding
+                y: root.theme.padding
                 spacing: 5
 
                 RowLayout {
